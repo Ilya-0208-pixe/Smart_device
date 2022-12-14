@@ -1,0 +1,30 @@
+.btn {
+  display: inline-flex;
+  padding: 10px 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: $ff-roboto;
+  text-align: center;
+  color: #f2f5f6;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background-color: transparent;
+  border: 1px solid #f2f5f6;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: opacity $trans-default;
+
+  @include hover-focus {
+    opacity: 0.8;
+  }
+
+  &--red {
+    background-color: $color-torch-red;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}

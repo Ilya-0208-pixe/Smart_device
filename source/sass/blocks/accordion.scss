@@ -1,0 +1,138 @@
+.accordion {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 20px 125px;
+  padding: 0 38px;
+
+  @include vp-1023 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 28px;
+    padding: 0;
+  }
+  @include vp-767 {
+    display: block;
+    margin: 0 -25px;
+    padding-top: 24px;
+  }
+}
+
+.accordion__sections {
+  @include vp-767 {
+    border-top: 1px solid rgba(248, 253, 255, 0.7);
+  }
+
+  &:last-child {
+    @include vp-767 {
+      border-bottom: 1px solid rgba(248, 253, 255, 0.7);
+    }
+  }
+}
+
+.accordion__title {
+  padding: 7px 0 21px;
+  user-select: none;
+  pointer-events: none;
+
+  @include vp-767 {
+    position: relative;
+    padding: 22px 25px 21px;
+    cursor: pointer;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 27px;
+    right: 26px;
+    width: 15px;
+    height: 1px;
+    background-color: #c4c4c4;
+  }
+
+  &::after {
+    transform: rotate(90deg);
+  }
+}
+
+.accordion__sections[open] .accordion__title::after {
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.accordion__sections[open] .accordion__title {
+  @include vp-767 {
+    padding-bottom: 17px;
+  }
+}
+
+.accordion__title h2 {
+  margin: 0;
+  font-size: 15px;
+  line-height: 16px;
+  font-family: $ff-roboto;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.accordion__container {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include vp-767 {
+    display: block;
+    padding: 0 25px 10px;
+  }
+}
+
+.accordion__list + .accordion__list {
+  margin-left: 30px;
+
+  @include vp-1023 {
+    margin-left: 0;
+  }
+}
+
+.accordion__list-item {
+  margin-bottom: 6px;
+
+  &:first-child {
+    @include vp-767 {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.accordion__list-link {
+  display: inline-block;
+  line-height: 22px;
+  color: rgba(255, 255, 255, 0.7);
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  &:hover,
+  &:focus {
+    color: #00b3ff;
+  }
+}
+
+.accordion__list--menu .accordion__list-link {
+  max-width: 220px;
+}
+
+.accordion__sections::marker,
+.accordion__title::marker,
+.accordion__sections::-webkit-details-marker,
+.accordion__title::-webkit-details-marker {
+  display: none;
+}
+
+.accordion__title,
+.accordion__sections {
+  list-style: none;
+}

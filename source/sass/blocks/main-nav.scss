@@ -1,0 +1,112 @@
+.main-nav {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 20px;
+  align-items: start;
+  padding-top: 30px;
+  padding-bottom: 35px;
+
+  @include vp-1023 {
+    padding-top: 20px;
+    padding-bottom: 25px;
+  }
+  @include vp-767 {
+    padding-top: 15px;
+    padding-bottom: 20px;
+  }
+}
+
+.main-nav__logo {
+  width: 215px;
+  height: 55px;
+
+  @include vp-767 {
+    width: 35px;
+    height: 35px;
+  }
+  @include hover-focus {
+    outline: none;
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.main-nav__list {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 20px 120px;
+  justify-content: center;
+  margin-top: 15px;
+
+  @include vp-1023 {
+    display: flex;
+    gap: 0;
+    flex-wrap: wrap;
+    margin: 10px 10px 0 auto;
+  }
+  @include vp-767 {
+    margin: 4px 0 0 auto;
+  }
+}
+
+.main-nav__item {
+  font-size: 16px;
+  line-height: 18px;
+
+  @include vp-1023 {
+    margin-left: 40px;
+  }
+}
+
+.main-nav__link {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  gap: 15px;
+  color: #f2f5f6;
+
+  @include vp-1023 {
+    display: block;
+  }
+
+  @include hover-focus {
+    color: #00b2ff;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.main-nav__link svg {
+  width: 20px;
+  height: 20px;
+  fill: #00b2ff;
+}
+
+.main-nav__button {
+  margin: 5px 60px 0 0;
+  padding: 10px 15px;
+
+  @include vp-1023 {
+    display: none;
+  }
+
+  @include hover-focus {
+    background-color: #00b2ff;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.main-nav__link span {
+  @include vp-1023 {
+    display: none;
+  }
+}
