@@ -8,6 +8,7 @@
 
 .form-box h3 {
   margin: 0 0 10px;
+
   font-weight: 400;
   font-size: 36px;
   line-height: 51px;
@@ -17,20 +18,16 @@
   @include vp-1023 {
     margin-bottom: 6px;
   }
+
   @include vp-767 {
     font-size: 30px;
     line-height: 42px;
   }
 }
 
-.modal__content h3 {
-  margin-bottom: 0;
-  font-size: 30px;
-  line-height: 42px;
-}
-
 .form-box p {
   margin: 0 0 35px;
+
   font-size: 16px;
   line-height: 22px;
   color: $color-default-white;
@@ -38,15 +35,13 @@
   @include vp-1023 {
     margin-bottom: 25px;
   }
+
   @include vp-767 {
     margin-bottom: 35px;
+
     font-size: 14px;
     line-height: 19px;
   }
-}
-
-.modal__content p {
-  margin-bottom: 40px;
 }
 
 .form-box__container {
@@ -68,11 +63,12 @@
 .form-box__container textarea {
   width: 100%;
   padding: 14px 15px;
+
   font-size: 16px;
   line-height: 22px;
   font-family: $ff-ptmono;
-  color: #ffffff;
   color: $color-default-white;
+
   background-color: rgba(4, 20, 39, 0.15);
   border: none;
   border-radius: 3px;
@@ -83,6 +79,7 @@
 
   &::placeholder {
     color: #ffffff;
+
     opacity: 1;
   }
 
@@ -95,11 +92,13 @@
   grid-column: 1/-1;
   height: 155px;
   padding-top: 24px;
+
   resize: none;
 
   @include vp-1023 {
     padding-top: 30px;
   }
+
   @include vp-767 {
     height: 180px;
     padding-top: 22px;
@@ -111,9 +110,11 @@
   width: 265px;
   margin-top: 15px;
   padding: 14px 10px 11px;
+
   font-size: 16px;
   line-height: 19px;
   font-family: $ff-roboto;
+
   background-color: #041427;
   border: 1px solid #041427;
 
@@ -141,6 +142,7 @@
   @include vp-1023 {
     margin: 24px 0 0;
   }
+
   @include vp-767 {
     margin: 3px 0 0 5px;
   }
@@ -152,6 +154,7 @@
 
 .form-box__checkbox label {
   position: relative;
+
   font-size: 14px;
   line-height: 16px;
   color: rgba(255, 255, 255, 0.8);
@@ -161,12 +164,14 @@
   width: 15px;
   height: 15px;
   padding: 0;
+
   background-color: #00b3ff;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 7px 4px;
   border: 1px solid #ffffff;
   border-radius: 2px;
+
   appearance: none;
 }
 

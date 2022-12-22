@@ -1,11 +1,13 @@
-import IMask from "imask";
+
+import IMask from 'imask';
 
 export const maskPhone = () => {
-  const inputElement = document.querySelectorAll("input[type=tel]");
+  const inputElement = document.querySelectorAll('input[type=tel]');
   const maskOptions = {
-    mask: "+{7}(000)000-00-00",
+    mask: '+{7} (000) 000-00-00',
   };
   inputElement.forEach(function (item) {
+    // eslint-disable-next-line
     IMask(item, maskOptions);
   });
 };

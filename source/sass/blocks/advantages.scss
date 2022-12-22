@@ -6,6 +6,7 @@
     padding-top: 80px;
     padding-bottom: 40px;
   }
+
   @include vp-767 {
     padding-top: 50px;
   }
@@ -19,6 +20,7 @@
   @include vp-1023 {
     gap: 30px 28px;
   }
+
   @include vp-767 {
     display: block;
   }
@@ -34,6 +36,7 @@
     min-height: 360px;
     padding: 40px 40px 30px;
   }
+
   @include vp-767 {
     min-height: 340px;
     margin-bottom: 30px;
@@ -67,6 +70,7 @@
   @include vp-1023 {
     margin-bottom: 9px;
   }
+
   @include vp-767 {
     font-size: 20px;
   }
@@ -92,6 +96,7 @@
   @include vp-1023 {
     margin-bottom: 8px;
   }
+
   @include vp-767 {
     display: block;
     width: 30px;

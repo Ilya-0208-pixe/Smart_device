@@ -1,13 +1,13 @@
 const Accordions = (function () {
   const closeOthers = function (current, parent) {
     let opened = Array.from(
-      parent.querySelectorAll(".accordion__sections[open]")
+        parent.querySelectorAll('.accordion__sections[open]')
     );
     opened.forEach(function (accordion) {
       if (accordion === current) {
         return;
       }
-      accordion.removeAttribute("open");
+      accordion.removeAttribute('open');
     });
   };
 
@@ -16,7 +16,7 @@ const Accordions = (function () {
     if (!parent) {
       return;
     }
-    if (!event.target.hasAttribute("open")) {
+    if (!event.target.hasAttribute('open')) {
       return;
     }
     closeOthers(event.target, parent);
@@ -28,13 +28,13 @@ const Accordions = (function () {
       toggle(event, selector);
     };
     publicAPIs.destroy = function () {
-      document.removeEventListener("toggle", toggleHandler, true);
+      document.removeEventListener('toggle', toggleHandler, true);
     };
     publicAPIs.init = function () {
-      if (!selector || typeof selector !== "string") {
-        throw new Error("Please provide a valid selector");
+      if (!selector || typeof selector !== 'string') {
+        throw new Error('Please provide a valid selector');
       }
-      document.addEventListener("toggle", toggleHandler, true);
+      document.addEventListener('toggle', toggleHandler, true);
     };
     publicAPIs.init();
     return publicAPIs;
@@ -45,13 +45,14 @@ const Accordions = (function () {
 export const accordion = function () {
   if (document.documentElement.clientWidth < 769) {
     let opened = Array.from(
-      document.querySelectorAll(".accordion__sections[open]")
+        document.querySelectorAll('.accordion__sections[open]')
     );
     if (opened) {
       opened.forEach(function (item) {
-        item.removeAttribute("open");
+        item.removeAttribute('open');
       });
     }
-    const accordionSection = new Accordions("[data-accordion]");
+    // eslint-disable-next-line
+    const accordionSection = new Accordions('[data-accordion]');
   }
 };

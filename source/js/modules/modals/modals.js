@@ -1,5 +1,5 @@
-import { ScrollLock } from '../../utils/scroll-lock';
-import { FocusLock } from '../../utils/focus-lock';
+import {ScrollLock} from '../../utils/scroll-lock';
+import {FocusLock} from '../../utils/focus-lock';
 
 export class Modals {
   constructor(settings = {}) {
@@ -124,8 +124,8 @@ export class Modals {
       modal.querySelectorAll('video, audio').forEach((el) => el.pause());
       modal.querySelectorAll('[data-iframe]').forEach((el) => {
         el.querySelector('iframe').contentWindow.postMessage(
-          '{"event": "command", "func": "pauseVideo", "args": ""}',
-          '*'
+            '{"event": "command", "func": "pauseVideo", "args": ""}',
+            '*'
         );
       });
     }
@@ -136,8 +136,8 @@ export class Modals {
       const autoPlay = el.closest('[data-auto-play]');
       if (autoPlay) {
         el.querySelector('iframe').contentWindow.postMessage(
-          '{"event":"command","func":"playVideo","args":""}',
-          '*'
+            '{"event":"command","func":"playVideo","args":""}',
+            '*'
         );
       }
     });
@@ -179,6 +179,7 @@ export class Modals {
       this._addListeners(modal);
       this._autoPlay(modal);
       document.addEventListener('click', this._documentClickHandler);
+      // eslint-disable-next-line
       focusedElement && focusedElement.focus();
     }, this._eventTimeout);
   }
