@@ -16,7 +16,7 @@
 .info__container {
   min-height: 320px;
   padding-left: 270px;
-  background-image: url("../img/svg/2022.svg");
+  background-image: url("../img/2022.png");
   background-repeat: no-repeat;
   background-position: 19px 0;
   background-size: 150px 320px;
@@ -36,6 +36,7 @@
   font-size: 36px;
   line-height: 51px;
   font-family: $ff-roboto;
+  font-weight: 400;
 
   @include vp-767 {
     font-size: 28px;

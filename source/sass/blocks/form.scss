@@ -19,7 +19,7 @@
 
 .form__container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 585px;
   gap: 10px 40px;
 
   @include vp-1023 {

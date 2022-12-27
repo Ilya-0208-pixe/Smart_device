@@ -616,15 +616,6 @@ button,
   height: 55px;
 }
 
-.main-nav__logo.focus-visible:focus {
-  outline: none;
-  opacity: 0.8;
-}
-
-.main-nav__logo:active {
-  opacity: 0.6;
-}
-
 .main-nav__list {
   display: -ms-grid;
   display: grid;
@@ -807,7 +798,7 @@ button,
 .info__container {
   min-height: 320px;
   padding-left: 270px;
-  background-image: url("../img/svg/2022.svg");
+  background-image: url("../img/2022.png");
   background-repeat: no-repeat;
   background-position: 19px 0;
   background-size: 150px 320px;
@@ -818,6 +809,7 @@ button,
   font-size: 36px;
   line-height: 51px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
 }
 
 .info__container p {
@@ -940,8 +932,6 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -952,15 +942,6 @@ button,
   width: 215px;
   height: 55px;
   margin-bottom: 30px;
-}
-
-.footer__logo.focus-visible:focus {
-  outline: none;
-  opacity: 0.8;
-}
-
-.footer__logo:active {
-  opacity: 0.6;
 }
 
 .footer__social-list {
@@ -1103,8 +1084,8 @@ button,
 .form__container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-  grid-template-columns: repeat(2, 1fr);
+  -ms-grid-columns: 1fr 585px;
+  grid-template-columns: 1fr 585px;
   gap: 10px 40px;
 }
 
@@ -1609,7 +1590,7 @@ button,
   .intro__button {
     display: block;
     max-width: 270px;
-    margin: 0 auto;
+    margin-left: 0;
     padding: 11px;
     font-size: 14px;
     line-height: 16px;
@@ -1756,6 +1737,9 @@ button,
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .footer__social-list {
@@ -1831,7 +1815,6 @@ button,
 
   .form-box__btn {
     width: 100%;
-    max-width: 270px;
     margin: 10px auto 0;
   }
 
@@ -1865,11 +1848,6 @@ button,
     opacity: 0.8;
   }
 
-  .main-nav__logo:hover:not(.focus-visible) {
-    outline: none;
-    opacity: 0.8;
-  }
-
   .main-nav__link:hover:not(.focus-visible) {
     color: #00b2ff;
     outline: none;
@@ -1878,11 +1856,6 @@ button,
   .main-nav__button:hover:not(.focus-visible) {
     background-color: #00b2ff;
     outline: none;
-  }
-
-  .footer__logo:hover:not(.focus-visible) {
-    outline: none;
-    opacity: 0.8;
   }
 
   .footer__social-link:hover:not(.focus-visible) {
