@@ -73,6 +73,10 @@
   &:active {
     opacity: 0.6;
   }
+
+  &:focus {
+    outline: 1px solid #00b2ff;
+  }
 }
 
 .main-nav__link svg {

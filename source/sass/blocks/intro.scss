@@ -8,7 +8,7 @@
   background-size: cover;
 
   @include vp-1023 {
-    padding-top: 180px;
+    padding-top: 80px;
     padding-bottom: 205px;
     background-image: url("../img/background-image-tablet.jpg");
 
@@ -18,7 +18,6 @@
   }
 
   @include vp-767 {
-    padding-top: 150px;
     padding-bottom: 190px;
     background-image: url("../img/background-image-mobile.jpg");
 

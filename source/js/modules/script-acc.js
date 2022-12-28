@@ -43,7 +43,7 @@ const Accordions = (function () {
 })();
 
 export const accordion = function () {
-  if (document.documentElement.clientWidth < 769) {
+  if (document.documentElement.clientWidth < 768) {
     let opened = Array.from(
         document.querySelectorAll('.accordion__sections[open]')
     );

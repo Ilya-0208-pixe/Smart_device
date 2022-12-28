@@ -651,6 +651,10 @@ button,
   opacity: 0.6;
 }
 
+.main-nav__link:focus {
+  outline: 1px solid #00b2ff;
+}
+
 .main-nav__link svg {
   width: 20px;
   height: 20px;
@@ -888,6 +892,7 @@ button,
   position: relative;
   z-index: 1;
   display: block;
+  height: 100%;
   min-height: 650px;
   padding: 46px 41px;
   color: #ffffff;
@@ -1000,6 +1005,7 @@ button,
   -ms-user-select: none;
   user-select: none;
   pointer-events: none;
+  outline: none;
 }
 
 .accordion__title::before,
@@ -1051,9 +1057,15 @@ button,
   color: rgba(255, 255, 255, 0.7);
 }
 
-.accordion__list-link:hover,
-.accordion__list-link:focus {
+.accordion__list-link:not(.accordion__list-link--address):hover,
+.accordion__list-link:not(.accordion__list-link--address):focus {
   color: #00b3ff;
+}
+
+.accordion__list-link--address {
+  outline: none;
+  border: none;
+  pointer-events: none;
 }
 
 .accordion__list--menu .accordion__list-link {
@@ -1230,9 +1242,14 @@ button,
 
 .form-box__checkbox label {
   position: relative;
+  cursor: pointer;
   font-size: 14px;
   line-height: 16px;
   color: rgba(255, 255, 255, 0.8);
+}
+
+.form-box__checkbox label:hover {
+  opacity: 0.6;
 }
 
 .form-box__checkbox input[type=checkbox] {
@@ -1248,6 +1265,7 @@ button,
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  cursor: pointer;
 }
 
 .form-box__checkbox input[type=checkbox]:checked {
@@ -1297,6 +1315,10 @@ button,
     padding: 0 50px;
   }
 
+  .header {
+    position: static;
+  }
+
   .main-nav {
     padding-top: 20px;
     padding-bottom: 25px;
@@ -1329,7 +1351,7 @@ button,
   }
 
   .intro {
-    padding-top: 180px;
+    padding-top: 80px;
     padding-bottom: 205px;
     background-image: url("../img/background-image-tablet.jpg");
   }
@@ -1567,7 +1589,6 @@ button,
   }
 
   .intro {
-    padding-top: 150px;
     padding-bottom: 190px;
     background-image: url("../img/background-image-mobile.jpg");
   }
@@ -1744,6 +1765,9 @@ button,
 
   .footer__social-list {
     margin: 0;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 
   .accordion {
@@ -1764,6 +1788,11 @@ button,
     position: relative;
     padding: 22px 25px 21px;
     cursor: pointer;
+    -webkit-user-select: all;
+    -moz-user-select: all;
+    -ms-user-select: all;
+    user-select: all;
+    pointer-events: all;
   }
 
   .accordion__sections[open] .accordion__title::after {

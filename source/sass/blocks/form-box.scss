@@ -153,10 +153,15 @@
 
 .form-box__checkbox label {
   position: relative;
+  cursor: pointer;
 
   font-size: 14px;
   line-height: 16px;
   color: rgba(255, 255, 255, 0.8);
+
+  &:hover {
+    opacity: 0.6;
+  }
 }
 
 .form-box__checkbox input[type="checkbox"] {
@@ -172,6 +177,7 @@
   border-radius: 2px;
 
   appearance: none;
+  cursor: pointer;
 }
 
 .form-box__checkbox input[type="checkbox"]:checked {
