@@ -481,8 +481,9 @@ button,
   -ms-transform: scale(1.2);
   transform: scale(1.2);
   /*скрыть и отобразить модальное окно*/
-  visibility: hidden;
-  opacity: 0;
+  /*
+    visibility: hidden;
+    opacity: 0;*/
   -webkit-transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1), -webkit-transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
   transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1), -webkit-transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
   -o-transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), transform 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1);
@@ -664,6 +665,7 @@ button,
 .main-nav__button {
   margin: 5px 60px 0 0;
   padding: 10px 15px;
+  width: 160px;
 }
 
 .main-nav__button.focus-visible:focus {
@@ -1039,8 +1041,6 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
 }
 
 .accordion__list + .accordion__list {
@@ -1110,10 +1110,10 @@ button,
 }
 
 .form-box h3 {
-  margin: 0 0 10px;
+  margin: 0 0 2px;
   font-weight: 400;
-  font-size: 36px;
-  line-height: 51px;
+  font-size: 30px;
+  line-height: 42px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   color: #ffffff;
 }
@@ -1215,7 +1215,7 @@ button,
 
 .modal__content .form-box__btn {
   width: 100%;
-  margin-top: 5px;
+  margin-top: 7px;
 }
 
 .form-box__checkbox {
@@ -1270,6 +1270,7 @@ button,
 
 .form-box__checkbox input[type=checkbox]:checked {
   background-image: url("../img/svg/tick.svg");
+  background-size: 8px;
 }
 
 @media (min-width: 1024px) {
@@ -1351,7 +1352,8 @@ button,
   }
 
   .intro {
-    padding-top: 80px;
+    padding-top: 100px;
+    margin-top: -20px;
     padding-bottom: 205px;
     background-image: url("../img/background-image-tablet.jpg");
   }
@@ -1495,6 +1497,10 @@ button,
     grid-template-columns: repeat(2, 1fr);
     gap: 20px 28px;
     padding: 0;
+  }
+
+  .accordion__container {
+    display: block;
   }
 
   .accordion__list + .accordion__list {
@@ -1804,7 +1810,6 @@ button,
   }
 
   .accordion__container {
-    display: block;
     padding: 0 25px 10px;
   }
 

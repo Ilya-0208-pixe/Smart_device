@@ -8,7 +8,8 @@
   background-size: cover;
 
   @include vp-1023 {
-    padding-top: 80px;
+    padding-top: 100px;
+    margin-top: -20px;
     padding-bottom: 205px;
     background-image: url("../img/background-image-tablet.jpg");
 

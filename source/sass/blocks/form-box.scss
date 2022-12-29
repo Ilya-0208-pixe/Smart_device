@@ -7,11 +7,11 @@
 }
 
 .form-box h3 {
-  margin: 0 0 10px;
+  margin: 0 0 2px;
 
   font-weight: 400;
-  font-size: 36px;
-  line-height: 51px;
+  font-size: 30px;
+  line-height: 42px;
   font-family: $ff-roboto;
   color: $color-default-white;
 
@@ -126,7 +126,7 @@
 
 .modal__content .form-box__btn {
   width: 100%;
-  margin-top: 5px;
+  margin-top: 7px;
 }
 
 .form-box__checkbox {
@@ -182,4 +182,5 @@
 
 .form-box__checkbox input[type="checkbox"]:checked {
   background-image: url("../img/svg/tick.svg");
+  background-size: 8px;
 }

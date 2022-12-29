@@ -88,6 +88,7 @@
 .main-nav__button {
   margin: 5px 60px 0 0;
   padding: 10px 15px;
+  width: 160px;
 
   @include vp-1023 {
     display: none;
